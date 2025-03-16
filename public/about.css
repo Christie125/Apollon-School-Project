@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+:root{
+  --orange:#E27522;
+  --navy:#0B445B;
+  --navy70:#0b445ba4;
+  --navy20:#0b445b22;
+  --navy10:#0b445b0f;
+  --orange50:#e2752235;
+  --orange20:#E275221f;
+}
+
+.atkinson-hyperlegible-regular {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .atkinson-hyperlegible-bold {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }  
+
+body{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: var(--navy);
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: var(--navy20);
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    filter: opacity(40%);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -140%); 
+    text-align: center;
+    z-index: 10;
+    font-size: 4em;
+}
+
+.nav {
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  background-color: var(--navy20);
+  text-align: right;
+  padding: 1.5%;
+  width: 97%;
+  font-family: "Atkinson HYperlegible", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+#link-1 {
+  margin-right: 2%;
+}
+
+#link-2 {
+  margin-right: 2%;
+}
+
+p{
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1em;
+}
+
+section {
+  padding-bottom: 3%;
+}
+
+.section-header{
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.footer{
+  display: flex;
+  margin: auto;
+  background-color: var(--navy20);
+  line-height: 1.5;
+  padding-bottom: 2%;
+}
+
+.list {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+a {
+  color: var(--navy);
+}
+
+a:hover{
+  color: var(--orange);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height:200px;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  color: var(--navy);
+  background-color: var(--orange20);
+  overflow: hidden; /* Ensures text stays within the card on hover */
+  align-items: center;
+}
+
+.card:hover {
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains the image aspect ratio */
+  background-blend-mode: lighten;
+  opacity: 30%;
+  max-width: 100%;
+}
+
+.card-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 1.5em;
+  color: var(--navy);
+  z-index: 10; 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.new-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: var(--navy);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  text-align: left;
+}
+
+.card:hover .card-text {
+  opacity: 0; 
+  transform: translate(-50%, -50%) scale(1.2); 
+}
+
+.card:hover .new-text {
+  opacity: 1; 
+}
+
+.cards{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin: auto;
+}
+
+.benefits-section {
+  background-color: var(--navy10);
+}
+
+@media screen and (max-width: 650px) {
+  .header-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    z-index: 10;
+    font-size: 3em;
+  }
+
+  .logos-slide img {
+    height: 15vh;
+    margin: 0 10px;
+    border-radius: 10px;
+  }
+
+  .image-container img {
+    object-fit: cover;
+    height: 40vh;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    width: 90%;
+    margin: auto;
+  }
+
+  .card {
+    width: 45%   ; 
+    height: 150px;
+    margin: 10px;
+    color: var(--navy);
+    background-color: var(--orange20);
+    overflow: hidden; /* Ensures text stays within the card on hover */
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 0.8em;
+  }
+}

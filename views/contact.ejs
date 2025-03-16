@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section class="top">
+        <div  class="image-container">
+            <div class="nav">
+                <a href="/" class="nav-link" id="link-1">Home</a>
+                <a href="/about" class="nav-link" id="link-2">About</a>
+                <a href="/contact" class="nav-link" id="link-3">Contact</a>
+            </div>
+            <img src="/images/apollon-5.png" alt="Background image of Apollon, the new wearable device.">
+            <h1 class="header-text">Contact Us</h1>
+        </div>
+        <section class="form-section">
+            <div class="center">
+                <h1 class="contact-h1">Contact</h1>
+                <hr>
+                <form action="https://formsubmit.co/christie.shteyn@gmail.com" method="POST">
+                    <div class="txt_field">
+                    <input type="text" name="name" id="name" required>
+                    <span></span>
+                    <label>Full Name</label>
+                  </div>
+          
+                  <div class="txt_field">
+                      <input type="text" name="email" id="email" required>
+                      <span></span>
+                      <label>Email</label>
+                    </div>
+          
+                  <div class="txt_field">
+                    <input type="text" name="message" id="message" required>
+                    <span></span>
+                    <label>Message</label>
+                  </div>
+        
+                 <input type="hidden" name="_captcha" value="false">
+                 <input type="hidden" name="_next" value="http://localhost:4000/submitted">
+                 <div class="button-div">
+                    <button type="submit" class="learn-more-button">Submit</button>
+                 </div>
+                </form>
+            </div>
+        </section>
+            <section class="footer">
+                <div class="home-list list">
+                    <h4>Home</h4>
+                    <a href="/">Home</a>
+                    <br>
+                    <a href="/#about_section">About</a>
+                    <br>
+                    <a href="/#benefits_section">Benefits of Apollon</a>
+                    <br>
+                    <a href="/#research_section">The Research</a>
+                    <br>
+                    <a href="/#contact_section">Contact</a>
+                </div>
+                <div class="about-list list">
+                    <h4>About</h4>
+                    <a href="/about">About Apollon</a>
+                    <br>
+                    <a href="/about#aboutbenefits">Benefits of Apollon</a>
+                    <br>
+                    <a href="/about#aboutresearch">The Research</a>
+                </div>
+                <div class="contact-list list">
+                    <h4>Contact</h4>
+                    <a href="/contact">Contact</a>
+                </div>
+    </section>
+</body>
+</html>

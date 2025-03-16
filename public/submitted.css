@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+:root{
+  --orange:#E27522;
+  --navy:#0B445B;
+  --navy70:#0b445ba4;
+  --navy20:#0b445b22;
+  --orange50:#E275222c;
+}
+
+.atkinson-hyperlegible-regular {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .atkinson-hyperlegible-bold {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }  
+
+body{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: var(--navy);
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    background-color: var(--navy20);
+}
+
+  .header-text {
+    text-align: center;
+    font-size: 4em;
+}
+
+.learn-more-button {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  background-color: var(--navy);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.learn-more-button:hover {
+  transform: translate(0, -3%);
+  transition-timing-function: ease-in-out;
+  background-color: var(--navy);
+}
+
+.button-div {
+  text-align: center;
+  margin: auto;
+}
